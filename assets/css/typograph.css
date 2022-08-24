@@ -1,0 +1,61 @@
+:root {
+    /* 
+        # TYPOGRAPH
+        ## CUSTOM FONT - LEXEND
+        ### https://fonts.google.com/specimen/Lexend?query=lexend
+    */
+
+    /* FAMILY */
+    --font-family_thin: Lexend-Thin;
+    --font-family_extra-light: Lexend-ExtraLight;
+    --font-family_light: Lexend-Light;
+    --font-family_regular: Lexend-Regular;
+    --font-family_medium: Lexend-Medium;
+    --font-family_semi-bold: Lexend-SemiBold;
+    --font-family_bold: Lexend-Bold;
+    --font-family_extra-bold: Lexend-ExtraBold;
+    --font-family_black: Lexend-Black;
+}
+
+/* TITLE -> H1 */
+h1 {
+    color: var(--h1-color, hsla(0, 0%, 10%, 1));
+    font-family: var(--h1-font_family, Arial, Helvetica, sans-serif);
+    font-size: var(--h1-font_size, 2.25rem);
+    font-weight: var(--h1-font_weight, bold);
+    line-height: var(--h1-line_height, 2.75rem);
+}
+
+/* TITLE -> H2 */
+h2 {
+    color: var(--h2-color, hsla(0, 0%, 10%, 1));
+    font-family: var(--h2-font_family, Arial, Helvetica, sans-serif);
+    font-size: var(--h2-font_size, 1.75rem);
+    font-weight: var(--h2-font_weight, bold);
+    line-height: var(--h2-line_height, 2rem);
+}
+
+/* TITLE -> H3 */
+h3 {
+    color: var(--h3-color, hsla(0, 0%, 10%, 1));
+    font-family: var(--h3-font_family, Arial, Helvetica, sans-serif);
+    font-size: var(--h3-font_size, 1.5rem);
+    font-weight: var(--h3-font_weight, bold);
+    line-height: var(--h3-line_height, 1.75rem);
+}
+
+/* PARAGRAPH -> P */
+p {
+    color: var(--p-color, hsla(0, 0%, 10%, 1));
+    font-family: var(--p-font_family, Arial, Helvetica, sans-serif);
+    font-size: var(--p-font_size, 1rem);
+    font-weight: var(--p-font_weight, normal);
+    line-height: var(--p-line_height, 1.4rem);
+}
+
+/* PARAGRAPH -> STRONG | B */
+strong,
+b {
+    font-family: var(--strong-font_family, Arial, Helvetica, sans-serif);
+    font-weight: var(--strong-font_weight, bold);
+}

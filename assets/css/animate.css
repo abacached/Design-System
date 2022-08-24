@@ -1,0 +1,37 @@
+/* 
+    # ANIMATION
+*/
+
+/* DEFAULT */
+*[anime] {
+    animation-name: var(--animation-name, anime);
+    animation-duration: var(--animation-duration, 4s);
+    animation-delay: var(--animation-delay, 0s);
+    animation-iteration-count: var(--animation-iteration_count, 1);
+    animation-direction: var(--animation-direction, normal);
+    animation-timing-function: var(--animation-timing_function, linear);
+    animation-fill-mode: var(--animation-fill-mode, none);
+}
+
+/* SHAKE */
+[anime="shake"] {
+    --animation-name: shake;
+    --animation-duration: .2s;
+    --animation-timing-function: ease-in-out;
+}
+@keyframes shake {
+    from {
+        -moz-transform: rotate(3deg);
+        -webkit-transform: rotate(3deg);
+        -o-transform: rotate(3deg);
+        -ms-transform: rotate(3deg);
+        transform: rotate(3deg);
+    }
+    to {
+        -moz-transform: rotate(-3deg);
+        -webkit-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        -ms-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+    }
+}

@@ -1,0 +1,93 @@
+/* 
+    # DIALOG
+*/
+
+/* DEFAULT */
+dialog {
+    background-color: var(--dialog-background_color, hsla(0, 0%, 98%, 1));
+    border: var(--dialog-border, initial);
+    border-color: var(--dialog-border_color, hsla(0, 0%, 10%, 1));
+    border-radius: var(--dialog-border_radius, 8px);
+    border-style: var(--dialog-border_style, solid);
+    border-width: var(--dialog-border_width, 0px);
+    color: var(--dialog-color, hsla(0, 0%, 15%, 1));
+    gap: var(--dialog-gap, 0);
+    left: var(--dialog-left, 50%);
+    transform: translate(-50%, -50%);
+    max-width: var(--dialog-min_width, 500px);
+    padding: var(--dialog-padding, 0);
+    position: var(--dialog-position, fixed);
+    right: var(--dialog-right, auto);
+    top: 50%;
+    width: var(--dialog-width, 100vw);
+    z-index: var(--dialog-z_index, 99999);
+}
+dialog[open] {
+    display: var(--dialog-display, grid);
+    grid-template-areas: 
+        'dialog-header dialog-header'
+        'dialog-info dialog-info'
+        'dialog-menu dialog-menu'
+    ;
+    grid-template-columns: 60px 1fr;
+}
+dialog[icon] {
+    grid-template-areas: 
+        'dialog-icon dialog-header'
+        'dialog-icon dialog-info'
+        'dialog-menu dialog-menu'
+    ;
+}
+dialog[icon] .content-icon {
+    align-items: flex-start;
+    display: flex;
+    grid-area: dialog-icon;
+    justify-content: center;
+    padding: 16px 20px;
+}
+dialog header {
+    align-items: var(--dialog-header_align_items, center);
+    background-color: var(--dialog-header_background_color, transparent);
+    display: var(--dialog-header_display, flex);
+    grid-area: dialog-header;
+    justify-content: var(--dialog-header_justify_content, space-between);
+    padding: var(--dialog-header_padding, 16px 20px);
+    width: var(--dialog-header_width, 100%);
+}
+dialog header h1 {
+    --h1-color: var(--color-neutral_25, hsla(0, 0%, 25%, 1));
+    --h1-font_family: var(--font-family_light);
+    --h1-font_size: 1.3rem;
+}
+dialog .content-info {
+    background-color: var(--dialog-content_background_color, transparent);
+    display: var(--dialog-content_display, flex);
+    flex-direction: var(--dialog-content_flex_direction, column);
+    gap: var(--dialog-content_gap, 12px);
+    grid-area: dialog-info;
+    padding: var(--dialog-content_padding, 16px 20px);
+}
+dialog .content-info p {
+    --p-color: var(--color-neutral_35, hsla(0, 0%, 35%, 1));
+}
+dialog header button {
+    --button-background_color: transparent;
+    --button-border_width: 0;
+}
+dialog header button:hover {
+    --button-background_color: transparent;
+}
+dialog menu {
+    align-items: var(--dialog-menu_align_items, center);
+    background-color: var(--dialog-menu_background_color, hsla(0, 0%, 95%, 1));
+    border-radius: var(--dialog-menu_border_radius, 0 0 8px 8px);
+    display: var(--dialog-menu_display, flex);
+    gap: var(--dialog-menu_gap, 16px);
+    grid-area: dialog-menu;
+    justify-content: var(--dialog-menu_justify_content, flex-end);
+    padding: var(--dialog-menu_padding, 20px);
+    width: var(--dialog-menu_width, 100%);
+}
+dialog::backdrop {
+    background-color: var(--dialog-backdrop_background_color, hsla(0, 0%, 0%, .4));
+}

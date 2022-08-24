@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff"> 
+
+    <title>Modal | Popup</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="./assets/css/import.css">
+</head>
+<body>
+    <main style="
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        max-height: 100vh;
+        max-width: 100%;
+        width: 100vw;
+    ">
+        <button onclick="showDialog('.dialog-default')">Dialog Default</button>
+    </main>
+   
+    <dialog class="dialog-default" icon>
+        <div class="content-icon">
+            <img src="./assets/images/icons/arrow-forward.svg" alt="Ícone avançar">
+        </div>
+
+        <header>
+            <h1>Desativar conta</h1>
+            
+            <button title="Close dialog" onclick="closeDialog('.dialog-default')">X</button>
+        </header>
+
+        <div class="content-info">
+            <p>Olá, você está prestes a desativar sua conta por <strong>definitivo</strong>, caso seja essa a ação desejada, por gentiliza clique no botão <strong>desativar</strong>, caso contrário, basta clicar em <strong>cancelar</strong>. </p>
+        </div>
+
+        <menu>
+            <button class="bt-cancel" title="Cancelar ação" onclick="closeDialog('.dialog-default')">cancelar</button>
+
+            <button class="bt-confirm" title="Desativar conta">Desativar</button>
+        </menu>
+    </dialog>
+
+    <script>
+        function showDialog (el) {
+            const dialog = document.querySelector(el)
+            return dialog.showModal();
+        }
+        function closeDialog (el) {
+            const dialog = document.querySelector(el)
+            return dialog.close();
+        }
+    </script>
+</body>
+</html>
